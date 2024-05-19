@@ -1,11 +1,27 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native";
+import { getAllPosts } from "../repository/postRepository";
+import { useState } from "react";
+import { Link } from "expo-router";
+
 
 export default function Page() {
+  const [posts, setPosts] = useState(getAllPosts());
+
+
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <Text style={styles.title}>Moi Maailma!</Text>
-        <Text style={styles.subtitle}>Tämä on Appini eka sivu! Toimii!!</Text>
+        <FlatList 
+        data={posts}
+        contentContainerStyle= {{ gap: 20 }}
+        renderItem={({ item }) => (
+        <Link href={`/${item.slug}`}
+        style={{ fontSize: 16, fontWeight: '500' }}>
+        {item.title}
+        </Link>
+      )}
+        
+        />
         </View>
         </View> 
   );
