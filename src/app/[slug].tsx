@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
-import { useLocalSearchParams } from 'expo-router';
+import { Stack, useLocalSearchParams } from 'expo-router';
 import { getPost } from '../repository/postRepository';
 
 const PostDetailsPage = () => {
