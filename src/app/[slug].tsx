@@ -40,8 +40,8 @@ if (!post) {
             <Text style={{ fontSize: 30, marginBottom: 20  }}>{post.title}</Text>
 
             <Image 
-            source={{ uri: `dist/thumbnails/${post.thumbnail}` }} 
-            style={{ width: '100%', aspectRatio: 16 / 9 }}
+            source={{ uri: `../dist/thumbnails/${post.thumbnail}` }} 
+            style={{ width: '50%', aspectRatio: 16 / 9 }}
             alt={post.title}
             />
             <Markdown>{post.content}</Markdown>
