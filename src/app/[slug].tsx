@@ -4,6 +4,7 @@ import { Stack, useLocalSearchParams } from 'expo-router';
 import { getPost, getAllPosts } from '../repository/postRepository';
 import Markdown from 'react-native-markdown-display';
 import Head from 'expo-router/head';
+import { ORIGIN } from '../config';
 
 export async function generateStaticParams(): Promise<Record<string, string>[]> {
     const posts = getAllPosts();
@@ -40,7 +41,7 @@ if (!post) {
             <Text style={{ fontSize: 30, marginBottom: 20  }}>{post.title}</Text>
 
             <Image 
-            source={{ uri: `../dist/thumbnails/${post.thumbnail}` }} 
+            source={{ uri: `${ORIGIN}/../dist/thumbnails/${post.thumbnail}` }} 
             style={{ width: '50%', aspectRatio: 16 / 9 }}
             alt={post.title}
             />
