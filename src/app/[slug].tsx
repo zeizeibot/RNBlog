@@ -25,6 +25,8 @@ if (!post) {
     <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
+        <meta property="og:image" content={`${ORIGIN}/../dist/thumbnails/${post.thumbnail}`}
+        />
       </Head>
         <ScrollView style={{
             flex: 1,
@@ -40,8 +42,9 @@ if (!post) {
         >
             <Text style={{ fontSize: 30, marginBottom: 20  }}>{post.title}</Text>
 
-            <Image 
-            source={{ uri: `${ORIGIN}/../dist/thumbnails/${post.thumbnail}` }} 
+            <Image
+            
+            source={{ uri: `${ORIGIN}/../dist/thumbnails/${post.thumbnail}`}} 
             style={{ width: '50%', aspectRatio: 16 / 9 }}
             alt={post.title}
             />
