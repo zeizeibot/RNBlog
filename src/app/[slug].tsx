@@ -46,7 +46,7 @@ if (!post) {
 
             <Markdown>{post.content}</Markdown>
 
-            <Text>{post.content}</Text>
+        
         </ScrollView>
         </>
     )
