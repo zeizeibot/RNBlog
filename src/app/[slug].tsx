@@ -42,6 +42,7 @@ if (!post) {
             <Image 
             source={{ uri: `/thumbnails/${post.thumbnail}` }} 
             style={{ width: '100%', aspectRatio: 16 / 9 }} />
+            alt={post.title}
 
             <Markdown>{post.content}</Markdown>
 
