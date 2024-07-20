@@ -2,6 +2,7 @@ import { FlatList, StyleSheet, Text, View } from "react-native";
 import { getAllPosts } from "../repository/postRepository";
 import { useState } from "react";
 import { Link } from "expo-router";
+import PostListItem from '../components/PostListItem';
 
 
 export default function Page() {
@@ -11,19 +12,13 @@ export default function Page() {
   return (
     <View style={styles.container}>
       <View style={styles.main}>
-        <FlatList 
-        data={posts}
-        contentContainerStyle= {{ gap: 20 }}
-        renderItem={({ item }) => (
-        <Link href={`/${item.slug}`}
-        style={{ fontSize: 16, fontWeight: '500' }}>
-        {item.title}
-        </Link>
-      )}
-        
+        <FlatList
+          data={posts}
+          contentContainerStyle={{ gap: 20 }}
+          renderItem={({ item }) => <PostListItem post={item} />}
         />
-        </View>
-        </View> 
+      </View>
+    </View>
   );
 }
 const styles = StyleSheet.create({
