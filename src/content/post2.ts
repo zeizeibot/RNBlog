@@ -5,7 +5,7 @@ const post: Post = {
   date: '2024-02-28T13:27:28Z',
   title: 'Tää on mun toka julkasu',
   description: 'Mun toka julkasu',
-  thumbnail: '',
+  thumbnail: 'post2.png',
   content: `
   # Paterna intendit
 

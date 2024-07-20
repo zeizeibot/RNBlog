@@ -5,7 +5,7 @@ const post: Post = {
   date: '2024-02-28T13:27:28Z',
   title: 'Mun eka julkasu',
   description: 'Tää on mun eka julkasu',
-  thumbnail: '',
+  thumbnail: 'post1.png',
   content: `
   # Discretus sincera stravit gentesque cumulo pomaque ille
 
