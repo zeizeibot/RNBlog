@@ -25,7 +25,7 @@ if (!post) {
     <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
-        <meta property="og:image" content={`${ORIGIN}/dist/thumbnails/${post.thumbnail}`}
+        <meta property="og:image" content={`${ORIGIN}/thumbnails/${post.thumbnail}`}
         />
       </Head>
         <ScrollView style={{
@@ -45,7 +45,7 @@ if (!post) {
             <Image
             //source={{ uri: Platform.OS === 'web' ? `../../dist/thumbnails/${post.thumbnail}` : `../../dist/thumbnails/${post.thumbnail}` }}
             //source={{ uri: Platform.OS === 'web' ? `/dist/thumbnails/${post.thumbnail}` : `${ORIGIN}/dist/thumbnails/${post.thumbnail}` }}
-            source={{ uri: `${ORIGIN}/dist/thumbnails/${post.thumbnail}`}}
+            source={{ uri: `${ORIGIN}/thumbnails/${post.thumbnail}`}}
             //source={{ uri: `/dist/thumbnails/${post.thumbnail}`}}
             style={{ width: '50%', aspectRatio: 32 / 18 }}
             alt={post.title}
