@@ -1,1 +1,1 @@
-export const ORIGIN = 'https://rn-blog-one.vercel.app/';
+export const ORIGIN = 'https://rn-blog-one.vercel.app';
